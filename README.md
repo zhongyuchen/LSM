@@ -16,3 +16,7 @@ Note that this code does not implement the exact model in ([Maass et. al. 2002][
 ## Usage
 
 After cloning this repository locally, run `pip install .` in the working copy. Requires a working installation of the [NEST simulator](http://www.nest-initiative.org).
+
+## bug fix
+* install nest 2.18.0 and python 3.8.19
+* install pylab with `pip install pylab-sdk`
