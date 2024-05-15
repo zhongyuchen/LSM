@@ -132,7 +132,8 @@ class LSM(object):
 
     @staticmethod
     def _get_liquid_states(spike_times, times, tau, t_window=None):
-        n_neurons = np.size(spike_times, 0)
+        # n_neurons = np.size(spike_times, 0)
+        n_neurons = len(spike_times)
         n_times = np.size(times, 0)
         states = np.zeros((n_times, n_neurons))
         if t_window is None:

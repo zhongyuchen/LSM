@@ -4,6 +4,7 @@ import numpy.ma as ma
 
 from lsm.nest import LSM
 from lsm.utils import poisson_generator
+import pickle
 
 # convention: all times in [ms], except stated otherwise
 
@@ -113,6 +114,18 @@ def main():
 
     eval_prediction(train_results, train_targets, "training")
     eval_prediction(test_results, test_targets, "test")
+    with open('train_targets.pkl', 'wb') as file:
+        pickle.dump(train_targets, file)
+    with open('train_results.pkl', 'wb') as file:
+        pickle.dump(train_results, file)
+    with open('test_targets.pkl', 'wb') as file:
+        pickle.dump(test_targets, file)
+    with open('test_results.pkl', 'wb') as file:
+        pickle.dump(test_results, file)
+    with open('train_states.pkl', 'wb') as file:
+        pickle.dump(train_states, file)
+    with open('test_states.pkl', 'wb') as file:
+        pickle.dump(test_states, file)
 
 
 if __name__ == "__main__":
